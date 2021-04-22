@@ -1,0 +1,248 @@
+\documentclass[bachelor, och, labwork]{shiza}
+% параметр - тип обучения - одно из значений:
+%    spec     - специальность
+%    bachelor - бакалавриат (по умолчанию)
+%    master   - магистратура
+% параметр - форма обучения - одно из значений:
+%    och   - очное (по умолчанию)
+%    zaoch - заочное
+% параметр - тип работы - одно из значений:
+%    referat    - реферат
+%    coursework - курсовая работа (по умолчанию)
+%    diploma    - дипломная работа
+%    pract      - отчет по практике
+% параметр - включение шрифта
+%    times    - включение шрифта Times New Roman (если установлен)
+%               по умолчанию выключен
+\usepackage{subfigure}
+\usepackage{tikz,pgfplots}
+\pgfplotsset{compat=1.5}
+\usepackage{float}
+
+%\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+%\titleformat{\paragraph}
+%{\normalfont\normalsize}{\theparagraph}{1em}{}
+%\titlespacing*{\paragraph}
+%{35.5pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\paragraph}[block]
+{\hspace{1.25cm}\normalfont}
+{\theparagraph}{1ex}{}
+\titlespacing{\paragraph}
+{0cm}{2ex plus 1ex minus .2ex}{.4ex plus.2ex}
+
+% --------------------------------------------------------------------------%
+
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{tempora}
+
+\usepackage[sort,compress]{cite}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{fancyvrb}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage[english,russian]{babel}
+
+% \usepackage[colorlinks=true]{hyperref}
+\usepackage{url}
+
+\usepackage{underscore}
+\usepackage{setspace}
+\usepackage{indentfirst} 
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{enumitem}
+\usepackage{tikz}
+
+\newcommand{\eqdef}{\stackrel {\rm def}{=}}
+\newcommand{\specialcell}[2][c]{%
+\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}}
+
+\renewcommand\theFancyVerbLine{\small\arabic{FancyVerbLine}}
+
+\newtheorem{lem}{Лемма}
+
+\begin{document}
+
+% Кафедра (в родительном падеже)
+\chair{}
+
+% Тема работы
+\title{Сетевая утилита netstat}
+
+% Курс
+\course{2}
+
+% Группа
+\group{231}
+
+% Факультет (в родительном падеже) (по умолчанию "факультета КНиИТ")
+\department{факультета КНиИТ}
+
+% Специальность/направление код - наименование
+%\napravlenie{09.03.04 "--- Программная инженерия}
+%\napravlenie{010500 "--- Математическое обеспечение и администрирование информационных систем}
+%\napravlenie{230100 "--- Информатика и вычислительная техника}
+%\napravlenie{231000 "--- Программная инженерия}
+\napravlenie{100501 "--- Компьютерная безопасность}
+
+% Для студентки. Для работы студента следующая команда не нужна.
+% \studenttitle{Студентки}
+
+% Фамилия, имя, отчество в родительном падеже
+\author{Окунькова Сергея Викторовича}
+
+% Заведующий кафедрой
+% \chtitle{} % степень, звание
+% \chname{}
+
+%Научный руководитель (для реферата преподаватель проверяющий работу)
+\satitle{ассистент} %должность, степень, звание
+\saname{А. А. Фомин}
+
+% Руководитель практики от организации (только для практики,
+% для остальных типов работ не используется)
+% \patitle{к.ф.-м.н.}
+% \paname{С.~В.~Миронов}
+
+% Семестр (только для практики, для остальных
+% типов работ не используется)
+%\term{8}
+
+% Наименование практики (только для практики, для остальных
+% типов работ не используется)
+%\practtype{преддипломная}
+
+% Продолжительность практики (количество недель) (только для практики,
+% для остальных типов работ не используется)
+%\duration{4}
+
+% Даты начала и окончания практики (только для практики, для остальных
+% типов работ не используется)
+%\practStart{30.04.2019}
+%\practFinish{27.05.2019}
+
+% Год выполнения отчета
+\date{2021}
+
+\maketitle
+
+% Включение нумерации рисунков, формул и таблиц по разделам
+% (по умолчанию - нумерация сквозная)
+% (допускается оба вида нумерации)
+% \secNumbering
+
+%-------------------------------------------------------------------------------------------
+
+
+\begin{enumerate}
+    
+    \item Воспользовавшись командой netstat просмотрите статистику работы Ethernet - подключения.
+    
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{1}
+        \caption{Статистика работы Ethernet - подключения}
+        \label{fig:image1}
+    \end{figure}
+
+    \item Воспользовавшись командой netstat просмотрите статистику работы сетевых протоколов.
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.5\textwidth]{2}
+        \caption{Статистика работы сетевых протоколов}
+        \label{fig:image1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{3}
+        \caption{Статистика работы сетевых протоколов}
+        \label{fig:image1}
+    \end{figure}
+
+    \item Воспользовавшись командой netstat просмотрите статистику работы протокола ICMP (в выводе должны 
+    присутствовать данные только по этому протоколу).
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{4}
+        \caption{Статистика работы протокола ICMP}
+        \label{fig:image1}
+    \end{figure}
+
+    \item Командой netstat просмотрите список всех подключений TCP и прослушиваемых портов UDP.
+    
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{5}
+        \caption{Список всех подключений TCP и прослушиваемых портов UDP}
+        \label{fig:image1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{6}
+        \caption{Список всех подключений TCP и прослушиваемых портов UDP}
+        \label{fig:image1}
+    \end{figure}
+
+    \item Запустите браузер и установите соединение с любым сайтом. Повторите предыдущее задания и прокомментируйте результат.
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{7}
+        \caption{Список всех подключений TCP и прослушиваемых портов UDP, после открытия сайта}
+        \label{fig:image1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{8}
+        \caption{Список всех подключений TCP и прослушиваемых портов UDP, после открытия сайта}
+        \label{fig:image1}
+    \end{figure}
+
+    Послк подключения к сайту появились новые подключения TCP и прослушиваемые порты UDP.
+
+    \item С помощью команды netstat определите любые 5 процессов, прослушивающих UDP порты. Укажите наименование процессов и номера 
+    прослушиваемых портов.
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{9}
+        \caption{Процессы, прослушивающие UDP порты}
+        \label{fig:image1}
+    \end{figure}
+
+    \item С помощью команды netstat определите активные TCP – подключения, номера их портов и имена исполняемых файлов приложений, 
+    использующих эти подключения.
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.6\textwidth]{10}
+        \caption{Активные TCP – подключения}
+        \label{fig:image1}
+    \end{figure}
+
+    \begin{figure}[H]
+        \centering      %размер рисунка       здесь находится название файла рисунка, без указания формата
+        \includegraphics[width=0.75\textwidth]{11}
+        \caption{Активные TCP – подключения}
+        \label{fig:image1}
+    \end{figure}
+
+
+\end{enumerate}
+
+\end{document}
