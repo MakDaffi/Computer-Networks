@@ -1,0 +1,9 @@
+
+*.gz
+*.pkt
+lab12/lab12.pdf
+*.fdb_latexmk
+*.fls
+*.log
+*.xlsx
+*.aux
