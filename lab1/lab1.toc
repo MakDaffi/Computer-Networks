@@ -1,8 +1,0 @@
-\babel@toc {russian}{}
-\contentsline {section}{\numberline {1}Основы IP-адресации}{3}{}%
-\contentsline {section}{\numberline {2}Определение частей IP-адресов}{4}{}%
-\contentsline {section}{\numberline {3}IP-адреса хостов допустимые в коммерческих сетях}{5}{}%
-\contentsline {section}{\numberline {4}Доставка пакетов по заданному IP-адресу}{6}{}%
-\contentsline {section}{\numberline {5}Адресное пространство IPv4}{7}{}%
-\contentsline {section}{\numberline {6}Вопросы для самопроверки}{8}{}%
-\contentsfinish 
